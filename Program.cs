@@ -11,8 +11,24 @@ class Program
     {
         AddConfiguration();
 
-        DownloadArchive.Download(config["jsonFilePath"], config["basePath"]);
+        if(config is null)
+        {
+            Console.WriteLine("There is no configuration!");
+            return;
+        }
+
+        var jsonFilePath = config["jsonFilePath"];
+        var basePath = config["basePath"];
+
+        if(jsonFilePath is null
+            || basePath is null)
+        {
+            Console.WriteLine("Configuration is missing parameters!");
+            return;
+        }
         
+        DownloadArchive.Download(jsonFilePath, basePath);
+
         //RenameDirectory.RenameDirectories();
     }
 
