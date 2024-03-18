@@ -4,26 +4,34 @@ public static class RenameDirectory
 {
     public static void RenameDirectories()
     {
-        bool bts = false;
+        /*bool bts = false;
         string sourceDirectory = "";
         string destinationDirectory = "";
 
-        var list = new List<string>();
+        var list = new List<string>
+        {
+            @$"/Users/ricardolourenco/Downloads/giantbomb/Endurance Run - The Matrix Online - Not Like This/gb-2300-997-ID7GX8R"
+        };
+
+        list.AddRange(Directory
+                .GetDirectories(@$"/Users/ricardolourenco/Downloads/giantbomb/Endurance Run - The Matrix Online - Not Like This/", "gb-2300-????-*")
+                .Order()
+                .ToList());
+
+        for(int i = 1; i <= 5 ; i++)
+        {
+            CreateMatrix(i, list[i - 1], destinationDirectory);
+        }
 
         list = Directory
                 .GetDirectories(@$"/Users/ricardolourenco/Downloads/Giant Bomb/Endurance Run - Persona 4/")
                 .Order()
                 .ToList();
 
-        foreach(var i in list)
-        {
-            Console.WriteLine(i);
-        }
-
-        /*for(int i = 1; i <= 156 ; i++)
+        for(int i = 1; i <= 156 ; i++)
         {
             bts = CreatePersona4(i, bts, list[j], destinationDirectory);
-        }*/
+        }
 
         for(int i = 1; i <= 18; i++)
         {
@@ -68,6 +76,20 @@ public static class RenameDirectory
         for(int i = 1; i <= 27; i++)
         {
             CreateShenmue(i, list[i - 1], destinationDirectory);
+        }*/
+    }
+
+    static void CreateMatrix(int EpisodeNumber, string sourceDirectory, string destinationDirectory)
+    {
+        if(EpisodeNumber != 5)
+        {
+            destinationDirectory = @$"/Users/ricardolourenco/Downloads/giantbomb/Endurance Run - The Matrix Online - Not Like This/{EpisodeNumber:00}. Endurance Run - The Matrix Online - Not Like This - Part {EpisodeNumber:00}";
+            Directory.Move(sourceDirectory, destinationDirectory);
+        }
+        else
+        {
+            destinationDirectory = @$"/Users/ricardolourenco/Downloads/giantbomb/Endurance Run - The Matrix Online - Not Like This/{EpisodeNumber:00}. Endurance Run - The Matrix Online - Not Like This - Finale";
+            Directory.Move(sourceDirectory, destinationDirectory);
         }
     }
 

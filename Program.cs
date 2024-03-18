@@ -31,7 +31,7 @@ class Program
         /*Console.WriteLine("Write the name of the series:");
         var seriesName = Console.ReadLine();*/
         
-        DownloadArchive.Download(jsonFilePath, basePath);
+        //DownloadArchive.Download(jsonFilePath, basePath);
 
         //RenameDirectory.RenameDirectories();
     }
