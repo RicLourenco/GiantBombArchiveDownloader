@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GiantBombArchiveDownloader")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+79344f08c5df410b68cad1139df2000e821d963d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d7fd6844cd790a141628f0bb2abdcbb31a46dddf")]
 [assembly: System.Reflection.AssemblyProductAttribute("GiantBombArchiveDownloader")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GiantBombArchiveDownloader")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

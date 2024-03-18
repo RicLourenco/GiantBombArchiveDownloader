@@ -1,4 +1,5 @@
 ﻿using GiantBombArchiveDownloader.Library;
+using GiantBombArchiveDownloader.Library.DownloadApiEndpoint;
 using Microsoft.Extensions.Configuration;
 
 namespace GiantBombArchiveDownloader;
@@ -26,6 +27,9 @@ class Program
             Console.WriteLine("Configuration is missing parameters!");
             return;
         }
+
+        /*Console.WriteLine("Write the name of the series:");
+        var seriesName = Console.ReadLine();*/
         
         DownloadArchive.Download(jsonFilePath, basePath);
 
