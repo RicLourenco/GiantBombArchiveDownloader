@@ -4,7 +4,7 @@ public static class RenameDirectory
 {
     public static void RenameDirectories()
     {
-        RemoveER("Chrono Trigger");
+        /*RemoveER("Chrono Trigger");
 
         RemoveER("Deadly Premonition (BR)");
 
@@ -14,7 +14,8 @@ public static class RenameDirectory
 
         RemoveER("Shenmue");
 
-        RemoveER("The Matrix Online - Not Like This");
+        RemoveER("The Matrix Online - Not Like This");*/
+
         /*bool bts = false;
         string sourceDirectory = "";
         string destinationDirectory = "";

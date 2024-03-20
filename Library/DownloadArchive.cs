@@ -9,10 +9,19 @@ public static class DownloadArchive
     {
         Archive? Archive = JsonConvert.DeserializeObject<Archive>(File.ReadAllText(jsonSourcePath));
         string directory;
+        
+        if(Archive is null
+            || Archive.Response is null
+            || Archive.Response.Docs is null)
+        {
+            Console.WriteLine("There was an error reading the JSON file!");
+            return;
+        }
 
         if(string.IsNullOrEmpty(Archive.Response.Series))
         {
-            throw new Exception("JSON file does not contain series name in the response!");
+            Console.WriteLine("JSON file does not contain series name in the response!");
+            return;
         }
         else
         {

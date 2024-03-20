@@ -1,5 +1,4 @@
 ﻿using GiantBombArchiveDownloader.Library;
-using GiantBombArchiveDownloader.Library.DownloadApiEndpoint;
 using Microsoft.Extensions.Configuration;
 
 namespace GiantBombArchiveDownloader;
@@ -33,7 +32,7 @@ class Program
         
         //DownloadArchive.Download(jsonFilePath, basePath);
 
-        RenameDirectory.RenameDirectories();
+        //RenameDirectory.RenameDirectories();
     }
 
     static void AddConfiguration()
