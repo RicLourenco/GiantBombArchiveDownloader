@@ -33,7 +33,7 @@ class Program
         
         //DownloadArchive.Download(jsonFilePath, basePath);
 
-        //RenameDirectory.RenameDirectories();
+        RenameDirectory.RenameDirectories();
     }
 
     static void AddConfiguration()

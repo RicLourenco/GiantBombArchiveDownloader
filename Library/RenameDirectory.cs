@@ -4,6 +4,17 @@ public static class RenameDirectory
 {
     public static void RenameDirectories()
     {
+        RemoveER("Chrono Trigger");
+
+        RemoveER("Deadly Premonition (BR)");
+
+        RemoveER("Deadly Premonition (VJ)");
+
+        RemoveER("Persona 4");
+
+        RemoveER("Shenmue");
+
+        RemoveER("The Matrix Online - Not Like This");
         /*bool bts = false;
         string sourceDirectory = "";
         string destinationDirectory = "";
@@ -77,6 +88,19 @@ public static class RenameDirectory
         {
             CreateShenmue(i, list[i - 1], destinationDirectory);
         }*/
+    }
+
+    static void RemoveER(string series)
+    {
+        var list = Directory
+            .GetDirectories(@$"/Volumes/External HDD 4TB/Movies, Videos & Series/Giant Bomb/Endurance Run/{series}", "*Endurance Run - *")
+            .ToList();
+
+        foreach(var dir in list)
+        {
+            var newDir = dir.Replace("Endurance Run - ", "");
+            Directory.Move(dir, newDir);
+        }
     }
 
     static void CreateMatrix(int EpisodeNumber, string sourceDirectory, string destinationDirectory)
