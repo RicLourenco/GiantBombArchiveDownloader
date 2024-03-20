@@ -1,5 +1,4 @@
-﻿using GiantBombArchiveDownloader.Library;
-using Microsoft.Extensions.Configuration;
+﻿using Microsoft.Extensions.Configuration;
 
 namespace GiantBombArchiveDownloader;
 
